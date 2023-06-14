@@ -30,7 +30,7 @@ export default function Page({ params }: { params: { slug: string } }) {
   }
   console.log(weatherData)
   return (
-    <div>
+    <div className="p-8">
       <h1 className="font-bold uppercase">{params.slug}</h1>
       <div className="grid grid-cols-1 grid-rows-2 place-items-center md:grid-cols-2 md:grid-rows-1">
         <div className="col-span-1 grid grid-cols-2 grid-rows-4 place-items-center">
