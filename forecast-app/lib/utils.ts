@@ -62,10 +62,10 @@ export type GeocodingResponse = {
 }
 
 // Helper function to fetch the lat,lon coordinates
-export async function fetchGeoCoding(city: string) {
+export async function fetchGeoCoding(city: string, unit: string) {
   const API_KEY = "b1d0ced0452ac6963b5ca1e3cb0bc34e"
   const response = await fetch(
-    `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${API_KEY}`
+    `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=${unit}&appid=${API_KEY}`
   ) //fetch using the geocoding-api
   const data: GeocodingResponse = await response.json()
   console.log(data)
